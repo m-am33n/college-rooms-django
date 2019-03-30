@@ -10,6 +10,8 @@ class College(models.Model):
 	college_loc = models.CharField(max_length=200)
 	avail_sdate = models.DateTimeField()
 	avail_edate = models.DateTimeField()
-	# availability = models.BooleanField()
+	college_price = models.IntegerField(default=100)
+	availability = models.BooleanField(default=True)
+
 	def __unicode__(self):
 		return u'%s' % (self.college_name)

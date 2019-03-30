@@ -14,3 +14,9 @@ def index(request):
 	context = {}
 	template = loader.get_template('booking/index.html')
 	return HttpResponse(template.render(context, request))
+
+def view_rooms(request):
+	college_list = College.objects.all()
+	context = {'college_list': college_list}
+	template = loader.get_template('booking/rooms.html')
+	return HttpResponse(template.render(context, request))

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./js/jquery-2.0.2.min.js"></script>
+<script src="./js/bootsrap/bootstrap.min.js"></script>-->
+<style>
+    .redborder { border : 1px solid red !important;}
+    body{
+        background-image: url("http://zyzixun.net/data/out/121/3877496-nursing-wallpapers.jpg");
+       /*background-image: url("./img/doctor.jpg");*/
+       background-color: #CDCDCD;
+    }
+</style>
+<div class="col col-lg-12" style="font-size: 250%;text-align: center;padding-top: 10px;font-family: sans-serif;"><b>Colleges Availability</b></div>
+<ul>
+{% for choice in college_list.all %}
+    <li>{{ choice.college_id}}&nbsp&nbsp{{choice.college_name}}&nbsp&nbsp{{choice.college_loc}}</li>
+{% endfor %}
+</ul>

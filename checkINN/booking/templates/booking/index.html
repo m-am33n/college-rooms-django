@@ -14,7 +14,9 @@
        background-color: #CDCDCD;
     }
 </style>
-<div  >
+ <div class="container">
+  <form action="{% url 'booking:view_rooms' %}" method="post">
+    {% csrf_token %}
     <div class="row" id="Home">
         <!--<div class="col-lg-8">-->
         <div class="col col-lg-12" style="font-size: 250%;text-align: center;padding-top: 10px;font-family: sans-serif;"><b>ROOM AVAILABILITY</b></div>
@@ -32,15 +34,10 @@
                     <input type="date"  class="form-control required" id="enddate" placeholder="dd/mm/yyyy" style="width: 70%">            
                 </div>
             </div>
-            <div class="col-lg-12">
             <div class="col-lg-4">
-            </div>
-            <div class="col-lg-4">
-            <button type="submit" color="Red" form="nameform" value="Submit">Submit</button>
-            </div>
-            <div class="col-lg-4">
-            </div>
+                <input type="submit" color="Red" value="Submit"></input>
             </div>
     </div>
-</div>
+  </form>
+</div> 
 
